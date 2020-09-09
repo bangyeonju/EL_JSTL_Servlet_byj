@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+	<element name="쪽지">
+		<complexType> <!-- complexType:속성이나 자식 요소를 가질 수 있는 요소를 의미한다. -->
+			<sequence> <!-- sequence:하위 요소의 순서를 반드시 지켜야 한다는 것을 의미한다. -->
+				<element name="수신" type="string"/>
+				<element name="발신" type="string"/>
+				<element name="제목" type="string"/>
+				<element name="내용" type="string"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

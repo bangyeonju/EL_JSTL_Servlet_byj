@@ -1,0 +1,19 @@
+Servlet life cycle(생명주기)
+
+1.해당 서블릿 객체생성 : new Servlet()-생성자 호출
+
+2.init 호출
+
+3.service 호출 - 숨어있다.
+	get요청 => doGet()호출
+	post요청 => doPost()호출
+	
+	이 단계가 반복
+	
+4.destroy() : 서블릿 화일 수정(변경)-저장
+	해당서블릿 객체 사라진다.
+	
+
+Servlet 파일 실행 방법
+방법1
+방법2 : 프로젝트이름에서 Run as => Run on Server => urlmapping 문자열을 url에 쓰기.
