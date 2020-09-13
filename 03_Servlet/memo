@@ -2,7 +2,9 @@ Servlet life cycle(생명주기)
 
 1.해당 서블릿 객체생성 : new Servlet()-생성자 호출
 
-2.init 호출
+2.init() : 서블릿 생명주기에서 한번만 실행된다.
+			서블릿 초기화 작업을 수행.
+			
 
 3.service 호출 - 숨어있다.
 	get요청 => doGet()호출
@@ -10,10 +12,17 @@ Servlet life cycle(생명주기)
 	
 	이 단계가 반복
 	
-4.destroy() : 서블릿 화일 수정(변경)-저장
-	해당서블릿 객체 사라진다.
+4.destroy() : 서블릿 화일 수정(변경)-저장 또는 서버 중지 했을떄 destroy()가 한번 호출된다.
+				
+			  해당서블릿 객체 사라진다.
 	
 
 Servlet 파일 실행 방법
 방법1
 방법2 : 프로젝트이름에서 Run as => Run on Server => urlmapping 문자열을 url에 쓰기.
+
+
+서블릿 : 자바클래스 형태의 웹어플리케이션을 만들 수 있는 기술
+		HttpServlet을 상속받아 요청을 처리하는 클래스 
+		main없다.
+		컨데이너가 해당 서블릿 객체를 생성
