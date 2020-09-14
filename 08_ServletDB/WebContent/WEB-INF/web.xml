@@ -9,12 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
   <servlet>
-    <servlet-name>mem</servlet-name>
-    <servlet-class>myPkg.MymemServlet</servlet-class>
+  	<servlet-name>mem</servlet-name>
+  	<servlet-class>myPkg.MymemServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>mem</servlet-name>
-    <url-pattern>*.mem</url-pattern>
+  	<servlet-name>mem</servlet-name>
+  	<url-pattern>*.mem</url-pattern>
   </servlet-mapping>
+  
 </web-app>

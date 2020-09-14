@@ -1,0 +1,49 @@
+drop sequence seqmem;
+
+create sequence seqmem  
+increment by 1
+start with 1
+minvalue 1
+maxvalue 10000
+nocache;
+
+drop table mymem ;
+
+create table mymem(
+	id number primary key,
+	name varchar2(10),
+	password varchar2(10)
+);
+
+insert into mymem values(seqmem.nextval, '김철수','1234');
+insert into mymem values(seqmem.nextval, '아이유','5678');
+
+commit;
+
+select * from mymem;
+
+JDBC
+0. jar포함
+1. 드라이버 로드
+2. 계정에 접속
+3. SQL 분석 
+4. ?(위치 홀더)에 값 세팅
+5. SQL 실행
+6. close
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
