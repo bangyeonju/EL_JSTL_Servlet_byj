@@ -3,6 +3,6 @@
     
 Ex01_mymemVia.jsp <br>
 
-회원 가입 성공 했습니다. <br>
+회원 가입 성공 했습니다!. <br>
 
 <input type="button" value="목록 보기" onClick="location.href='select.mem'">
