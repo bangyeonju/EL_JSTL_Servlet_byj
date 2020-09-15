@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,16 +13,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class inputServe
+ * Servlet implementation class InputServe
  */
 @WebServlet("/serve")
-public class inputServe extends HttpServlet {
+public class InputServe extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public inputServe() {
+    public InputServe() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,7 +31,7 @@ public class inputServe extends HttpServlet {
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
-			System.out.println("InputServe init()");
+		System.out.println("InputServe init()");
 	}
 
 	/**
@@ -52,28 +53,47 @@ public class inputServe extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
-		response.setContentType("text/html; charSet=utf-8");
+		// TODO Auto-generated method stub
+		//doGet(request, response);
 		
-		PrintWriter pw = response.getWriter();
+		request.setCharacterEncoding("UTF-8");
+		
+		response.setContentType("text/html; charset=UTF-8");
+		
 		String name = request.getParameter("name");
-		request.setAttribute("age",30 );
-		myPkg.Person2 per  = new myPkg.Person2("ÌÉúÏó∞",23,164.2);
+		
+		request.setAttribute("age", 30);
+		
+		Person per = new Person("≈¬ø¨",23,162.4); // name,age,height
 		request.setAttribute("per", per);
 		
-		System.out.println("name="+name+"\n");
 		
-		pw.write("Ïù¥Î¶Ñ =" + name);
+		PrintWriter pw = response.getWriter();
+		
+		System.out.println("¿Ã∏ß:" + name);
+		
+		pw.print("¿Ã∏ß:" + name);
+		
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("result.jsp");
+		
 		dispatcher.forward(request, response);
 		
 		
-		
-		
-		
 		pw.close();
-		//doGet(request, response);
 	}
 
 }
+
+/* 3Ω√3∫– */
+
+
+
+
+
+
+
+
+
+
+

@@ -1,10 +1,16 @@
 package myPkg;
 
-public class Person2 {
-
+public class Person {
 	private String name;
 	private int age;
 	private double height;
+	
+	public Person(String name, int age, double height) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.height = height;
+	}
 	public String getName() {
 		return name;
 	}
@@ -23,18 +29,6 @@ public class Person2 {
 	public void setHeight(double height) {
 		this.height = height;
 	}
-	public Person2(String name, int age, double height) {
-		super();
-		this.name = name;
-		this.age = age;
-		this.height = height;
-	}
-	
-	
-	
-	
-	
-	
 	
 	
 }

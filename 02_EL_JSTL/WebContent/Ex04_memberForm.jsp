@@ -39,12 +39,8 @@
 <%
 	pageContext.setAttribute("pname","페이지네임");//pname=페이지네임
 	request.setAttribute("rname","리퀘스트네임");//rname=리퀘스트네임
-	
 	session.setAttribute("sname", "세션네임");//sname=세션네임 다음 페이지까지 넘어감 
-	
 	application.setAttribute("aname", "어플리케이션네임");//aname= 어플리케이션네임 다음 페이지까지 넘어감. 
 	//내가 사용하는 프로젝트 어디서든 사용가능. 프로젝트당 하나가 만들어진다.
-
-
 
 %>

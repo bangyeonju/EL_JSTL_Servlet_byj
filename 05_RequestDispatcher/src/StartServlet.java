@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,8 +22,8 @@ public class StartServlet extends HttpServlet {
      */
     public StartServlet() {
         super();
-        System.out.println("StartServlet");
-    	}
+        System.out.println("StartServlet()");
+    }
 
 	/**
 	 * @see Servlet#init(ServletConfig)
@@ -50,18 +51,19 @@ public class StartServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			//request.setCharacterEncoding("utf-8");
-			//response.setContentType("text/html; charSet=utf-8");
-			
-			int su1 = Integer.parseInt(request.getParameter("su1"));
-			int su2 = Integer.parseInt(request.getParameter("su2"));
-			int sum = su1 + su2;
-			request.setAttribute("hap", sum);
-			
-			RequestDispatcher dis  = request.getRequestDispatcher("calc/end.jsp"); // formì—ì„œ ë„˜ì–´ì˜¨ ë°ì´í„°ë¥¼ end.jspë¡œ ë„˜ê¸°ê¸°ìœ„í•´ ì‚¬ìš©í•œë‹¤.
-			dis.forward(request, response);
+		// TODO Auto-generated method stub
+		//doGet(request, response);
 		
-		//	doGet(request, response);
+		int su1 = Integer.parseInt(request.getParameter("su1"));
+		int su2 = Integer.parseInt(request.getParameter("su2"));
+		
+		int sum = su1 + su2;
+		
+		request.setAttribute("hap",sum);
+		
+		RequestDispatcher dis = request.getRequestDispatcher("calc/end.jsp");
+		
+		dis.forward(request, response); // form¿¡¼­ ³Ñ¾î¿Â µ¥ÀÌÅÍ¸¦ end.jsp·Î ³Ñ±â·Á°í..
 	}
 
 }

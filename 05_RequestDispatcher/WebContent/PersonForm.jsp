@@ -11,7 +11,7 @@
 </head>
 <body>
 <form method="post" action="<%=contextPath%>/PersonServlet"> 
-<!-- PersonServlet => mypkg.PersonServlet -->
+<!-- PersonServlet => mypkg.PersonServlet_내이름.java => PersonResult_내이름.jsp -->
 	<table border="1">
 		<tr>
 			<td>이름</td>

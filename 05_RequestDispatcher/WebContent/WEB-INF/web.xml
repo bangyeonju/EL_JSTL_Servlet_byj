@@ -9,12 +9,17 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
   <servlet>
-    <servlet-name>start</servlet-name>
-    <servlet-class>StartServlet</servlet-class>
+  	<servlet-name>start</servlet-name>
+  	<servlet-class>StartServlet</servlet-class>
   </servlet>
+  
   <servlet-mapping>
-    <servlet-name>start</servlet-name>
-    <url-pattern>/start.do</url-pattern>
+  	<servlet-name>start</servlet-name>
+  	<url-pattern>/start.do</url-pattern>
   </servlet-mapping>
+  
 </web-app>
+
+
