@@ -14,6 +14,8 @@ Ex02_surveyResult.jsp
 <th>분야</th>
 <th>발송방법</th>
 <th>동의</th>
+<th>삭제</th>
+<th>수정</th>
 </tr>
 <c:forEach  var="bean" items="${lists}">
 	<tr>
@@ -24,7 +26,14 @@ Ex02_surveyResult.jsp
 	<td>${bean.satisfaction}</td>
 	<td>${bean.part }</td>
 	<td>${bean.howto}</td>
-	<td>${bean.agree}</td>
+	<td>
+	<c:if test="${bean.agree == 1}">
+		동의함
+	</c:if>
+	<c:if test="${bean.agree == 0}">
+		동의안함
+	</c:if>
+	</td>
 	</tr>
 </c:forEach>
 </table>
