@@ -36,7 +36,7 @@ public class InitParameter extends HttpServlet {
       System.out.println("init");
       
      
-      // ServletContext 객체 : 프로젝트 당 1개 생성
+      // ServletContext 객체 : 프로젝트당 1개 생성
       ServletContext context = config.getServletContext();
       
       company = context.getInitParameter("company");
@@ -44,7 +44,7 @@ public class InitParameter extends HttpServlet {
       manager = context.getInitParameter("manager");
       title = context.getInitParameter("title");
       
-      // ServletConfig 객체 : 서블릿 당 1개 생성
+      // ServletConfig :서블릿당 1개 생성
       title_config = config.getInitParameter("title");
       System.out.println("company : " + company);
       System.out.println("singer : " + singer);
@@ -68,11 +68,11 @@ public class InitParameter extends HttpServlet {
 	   request.setCharacterEncoding("utf-8");
 	   response.setContentType("text/html; charSet=UTF-8");
 	   PrintWriter pw = response.getWriter();
-	   pw.print("회사명:"+company +"<br>");
-	   pw.print("가수명:" + singer+"<br>");
-	   pw.print("매니저:"+manager+"<br>");
-	   pw.print("제목:"+title+"<br>");
-	   pw.print("제목2:"+title_config+"<br>");
+	   pw.print("�쉶�궗紐�:"+company +"<br>");
+	   pw.print("媛��닔紐�:" + singer+"<br>");
+	   pw.print("留ㅻ땲��:"+manager+"<br>");
+	   pw.print("�젣紐�:"+title+"<br>");
+	   pw.print("�젣紐�2:"+title_config+"<br>");
 	   pw.close();
    }
 

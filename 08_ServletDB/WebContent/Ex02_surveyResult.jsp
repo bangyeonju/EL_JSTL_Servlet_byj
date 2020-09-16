@@ -17,7 +17,7 @@ Ex02_surveyResult.jsp
 <th>삭제</th>
 <th>수정</th>
 </tr>
-<c:forEach  var="bean" items="${lists}">
+<c:forEach var="bean" items="${lists}">
 	<tr>
 	<td>${bean.no }</td>
 	<td>${bean.getName() }</td>
@@ -34,6 +34,9 @@ Ex02_surveyResult.jsp
 		동의안함
 	</c:if>
 	</td>
+	<td><a href="delete.sv?no=${bean.no}">삭제</a></td>
+	<td><a href="updateForm.sv?no=${bean.no}">수정</a></td>
 	</tr>
 </c:forEach>
 </table>
+<a href="Ex02_surveyInputForm.jsp">삽입</a>

@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 Ex02_surveyInputForm.jsp <br><br>
+<%
+	application.setAttribute("flag", "false"); //flag=false //application:프로젝트당 하나! 프로젝트에서 쓰고싶은 변수?
+	// jsp에서는  Object obj =application.getAttribute("flag");
+	
+	
+%>
 <!-- insert.sv => svy\SurveyServlet.java -->
 <form action="insert.sv" method="post"> 
     과정 만족도 설문<br>
